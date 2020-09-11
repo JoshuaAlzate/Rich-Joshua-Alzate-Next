@@ -1,0 +1,61 @@
+@import "./functions";
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap");
+
+// Defining values
+// 16px based emphemeral unit
+$extra-small-range: (0em, 35.938em); // 0, 575px
+$small-range: (36em, 47.938em); // 576px, 767px
+$medium-range: (48em, 61.938em); // 768px, 991px
+$large-range: (62em, 74.938em); // 992px, 1199px
+$extra-large-range: (75em); // 1200px
+
+$screen: "only screen" !default;
+$landscape: "#{$screen} and (orientation: landscape)" !default;
+$portrait: "#{$screen} and (orientation: portrait)" !default;
+$extra-small-up: $screen !default;
+$extra-small-only: "#{$screen} and (max-width: #{lastElement($extra-small-range)})" !default;
+$small-up: "#{$screen} and (min-width:#{firstElement($small-range)})" !default;
+$small-only: "#{$screen} and (min-width:#{firstElement($small-range)}) and (max-width:#{lastElement($small-range)})" !default;
+$medium-up: "#{$screen} and (min-width:#{firstElement($medium-range)})" !default;
+$medium-only: "#{$screen} and (min-width:#{firstElement($medium-range)}) and (max-width:#{lastElement($medium-range)})" !default;
+$large-up: "#{$screen} and (min-width:#{firstElement($large-range)})" !default;
+$large-only: "#{$screen} and (min-width:#{firstElement($large-range)}) and (max-width:#{lastElement($large-range)})" !default;
+$extra-large-up: "#{$screen} and (min-width:#{firstElement($extra-large-range)})" !default;
+$extra-large-only: "#{$screen} and (min-width:#{firstElement($extra-large-range)}))" !default;
+
+$breakpoints: (
+    extra-small-up: $extra-small-up,
+    extra-small-only: $extra-small-only,
+    small-up: $small-up,
+    small-only: $small-only,
+    medium-up: $medium-up,
+    medium-only: $medium-only,
+    large-up: $large-up,
+    large-only: $large-only,
+    extra-large-up: $extra-large-up,
+    extra-large-only: $extra-large-only,
+);
+
+@function respond-to($keys...) {
+    $value: null;
+
+    @each $key in $keys {
+        $value: append($value, map-get($breakpoints, $key), "comma");
+    }
+
+    @return $value;
+}
+
+@mixin mediaQuery($keys...) {
+    $value: respond-to($keys...);
+    @if $value != null {
+        @media #{$value} {
+            @content;
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$value}`. " + "Please make sure it is defined in `$breakpoints` map.";
+        @content;
+    }
+}
