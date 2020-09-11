@@ -27,6 +27,7 @@
     "@types/jest": "^26.0.13",
     "classnames": "^2.2.6",
     "next": "^9.5.3",
+    "next-images": "^1.4.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
