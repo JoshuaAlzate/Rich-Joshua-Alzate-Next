@@ -22,6 +22,9 @@ import PhotoshopCCSVG from '../assets/images/svg/photoshop_cc.svg';
 import AfterEffectsCCSVG from '../assets/images/svg/after_effects_cc.svg';
 import IllustratorCCSVG from '../assets/images/svg/illustrator_cc.svg';
 import SnapseedSVG from '../assets/images/svg/snapseed.svg';
+import SGSSVG from '../assets/images/svg/sgs.svg';
+import ApexSVG from '../assets/images/svg/apex.svg';
+import HongLeongBankSVG from '../assets/images/svg/hong-leong-bank.svg';
 
 import { faJsSquare, faHtml5, faCss3Alt, faSass, faAngular, faNodeJs } from '@fortawesome/free-brands-svg-icons';
 import { faDrum, faDatabase, faGuitar } from '@fortawesome/free-solid-svg-icons';
@@ -191,6 +194,32 @@ export default function Index() {
                                 Google Snapseed
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id={style['companySection']} className="row flex-column align-items-center">
+                <h2>Amazing organisations that I have collaborated with:</h2>
+                <div id={style['companyList']} className="row flex-nowrap justify-content-center">
+                    <img src={SGSSVG} alt="Société Générale de Surveillance" className={classNames(style['companyLogo'], "col-xs-12 col-sm-12 col-md-4")} />
+                    <img src={ApexSVG} alt="Apex MobileTech" className={classNames(style['companyLogo'], "col-xs-12 col-sm-12 col-md-4")} />
+                    <img src={HongLeongBankSVG} alt="Hong Leong Bank Berhad"
+                        className={classNames(style['companyLogo'], "col-xs-12 col-sm-12 col-md-4")} />
+                </div>
+            </section>
+
+            <section id={style['projectReachSection']} className="row flex-nowrap justify-content-center">
+                <div id={style['container']} className="row flex-nowrap align-items-center">
+                    <h2 className={classNames(style['column'], "row flex-nowrap justify-content-center col")}>
+                        Got an idea?
+                    </h2>
+                    <p className={classNames(style['column'], "row flex-nowrap justify-content-center col")}>
+                        Make that amazing idea of yours come to reality, let's talk about it over a cup of coffee.
+                    </p>
+                    <div className={classNames(style['column'], "row flex-nowrap justify-content-center col")}>
+                        <button id={style['contactButton']} className="justify-content-center align-items-center">
+                            Let's do it!
+                        </button>
                     </div>
                 </div>
             </section>
