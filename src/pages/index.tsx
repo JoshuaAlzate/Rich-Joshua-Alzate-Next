@@ -217,7 +217,7 @@ export default function Index() {
                         Make that amazing idea of yours come to reality, let's talk about it over a cup of coffee.
                     </p>
                     <div className={classNames(style['column'], "row flex-nowrap justify-content-center col")}>
-                        <button id={style['contactButton']} className="justify-content-center align-items-center">
+                        <button id={style['contactButton']} className="justify-content-center align-items-center" onClick={(e) => { window.location.assign('mailto:josh@alzate17@gmail.com'); }}>
                             Let's do it!
                         </button>
                     </div>

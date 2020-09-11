@@ -31,7 +31,7 @@ export default function NavigationBar() {
                 </div>
 
                 <div id={style['hello-section']} className={classNames("col row align-items-center justify-content-end")}>
-                    <button id={style['hello-button']} className={classNames("justify-content-center align-items-center")}>
+                    <button id={style['hello-button']} className={classNames("justify-content-center align-items-center")} onClick={(e) => { window.location.assign('mailto:josh@alzate17@gmail.com'); }}>
                         <span>
                             Say Hello
                         </span>
