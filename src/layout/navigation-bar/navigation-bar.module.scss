@@ -1,0 +1,87 @@
+@import "../../shared/scss/variables";
+
+#navigation-bar {
+    height: 7.2rem;
+
+    #logo-section {
+        a {
+            margin-left: 1.2rem;
+            #j-logo {
+                height: inherit;
+                width: inherit;
+                #stroke {
+                    stroke-width: 20;
+                    animation: letter-animation 5s linear forwards;
+                    animation-delay: 5.1s;
+                }
+            }
+        }
+    }
+
+    #hello-section {
+        background: $color5;
+
+        #hello-button {
+            border: 1px solid $color1;
+            border-radius: 50px;
+            background-color: transparent;
+            color: $color1;
+            font-size: 28px;
+            font-family: $titleFont;
+
+            height: 3.5rem;
+            width: 200px;
+            margin-right: 1.2rem;
+
+            display: grid;
+            cursor: pointer;
+
+            span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+                &:after {
+                    content: "\1F44B";
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                    transform: scaleX(-1);
+                }
+            }
+
+            &:hover {
+                span {
+                    padding-right: 25px;
+                    &:after {
+                        opacity: 1;
+                        right: -10px;
+                    }
+                }
+            }
+
+            &:focus {
+                outline: 0 !important;
+                -webkit-tap-highlight-color: transparent;
+            }
+        }
+    }
+}
+
+@include mediaQuery(small-only, medium-only) {
+    #navigation-bar {
+        #hello-section {
+            background: $color1;
+            #hello-button {
+                border: 1px solid $color5;
+                font-size: 20px;
+                color: $color5;
+
+                height: 2.5rem;
+                width: 150px;
+            }
+        }
+    }
+}
