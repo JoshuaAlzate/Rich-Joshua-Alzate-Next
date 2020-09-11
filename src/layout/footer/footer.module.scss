@@ -1,0 +1,45 @@
+@import "../../shared/scss/variables";
+
+#footer {
+    height: 90vh;
+    background-color: $color5;
+
+    #logo {
+        #j-logo {
+            height: inherit;
+            #stroke {
+                fill: $color1 !important;
+            }
+        }
+    }
+
+    #motto {
+        h4 {
+            color: $color1;
+            font-weight: 400;
+        }
+    }
+
+    #socialSection {
+        .socialMediaLinks {
+            height: 3rem;
+            margin: 0 0.5rem;
+            a {
+                height: 2rem;
+                width: 2rem;
+
+                border: 2px solid $color1;
+                border-radius: 100%;
+                svg {
+                    color: $color1;
+                }
+            }
+        }
+    }
+
+    #copyrightSection {
+        #copyright {
+            color: $color1;
+        }
+    }
+}
