@@ -8,17 +8,85 @@ body {
     height: 100vh;
     width: 100vw;
     scroll-behavior: smooth;
+    background-color: $color1;
 }
 
 body {
     margin: 0;
-    font-family: $text-font-family, -apple-system, BlinkMacSystemFont;
+    font-family: $textFont, -apple-system, BlinkMacSystemFont;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    background-color: $primary-color-3;
+    background-color: $color1;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $titleFont;
+}
+
+h4,
+h5 {
+    font-family: $textFont;
+}
+
+p,
+ul {
+    font-family: $textFont;
+}
+
+.light {
+    color: $color1;
+}
+
+.dark {
+    color: $color5;
+}
+
+.bg-light {
+    background: $color1;
+}
+
+.bg-dark {
+    background: $color5;
+}
+
+#name {
+    font-family: $nameFont;
+}
+
+.brand-logo {
+    a {
+        height: 6.2rem;
+        object {
+            height: inherit;
+        }
+    }
+}
+
+.icon {
+    height: 14px;
+    width: 14px;
+}
+
+@include mediaQuery(small-only, medium-only) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+        text-align: center;
+    }
+
+    .brandLogo {
+        a {
+            height: 4.2rem;
+        }
+    }
 }
