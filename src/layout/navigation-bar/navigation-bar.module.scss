@@ -85,3 +85,19 @@
         }
     }
 }
+
+@include mediaQuery(small-only, extra-small-only)  {
+    #navigation-bar {
+        #hello-section {
+            background: $color1;
+            #hello-button {
+                border: 1px solid $color5;
+                font-size: 20px;
+                color: $color5;
+
+                height: 2.5rem;
+                width: 150px;
+            }
+        }
+    }
+}
