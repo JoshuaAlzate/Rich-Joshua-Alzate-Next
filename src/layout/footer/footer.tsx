@@ -65,9 +65,9 @@ export default function Footer() {
 
                 <div id={style["socialSection"]} className="row justify-content-center">
                     {
-                        socialMediaLinks.map(element => {
+                        socialMediaLinks.map((element, index) => {
                             return (
-                                <div className={classNames(style["socialMediaLinks"], "row align-items-center")}>
+                                <div key={index} className={classNames(style["socialMediaLinks"], "row align-items-center")}>
                                     <a href={element.link} className={classNames("row justify-content-center align-items-center")}>
                                         <FontAwesomeIcon icon={element.icon} />
                                     </a>

@@ -31,6 +31,7 @@
                 border: 2px solid $color1;
                 border-radius: 100%;
                 svg {
+                    width: 15px;
                     color: $color1;
                 }
             }
@@ -40,6 +41,9 @@
     #copyrightSection {
         #copyright {
             color: $color1;
+            svg {
+                width: 15px;
+            }
         }
     }
 }
