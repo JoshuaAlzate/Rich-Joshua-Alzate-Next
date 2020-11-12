@@ -50,12 +50,12 @@ export default function Index() {
                 <div id={style['description-details']} className={classNames(style['details-section'], "col-xs-12 col-sm-12 col-md-6 row justify-content-center flex-column bg-dark")}>
                     <h1 className="light">Hi, nice to meet you.</h1>
                     <p className="light">
-                        Everything started with passion for technologies. Curiosity how things work as it is, and desire to create
-                        things that makes a difference. I started nearly 4 years ago in Software Development field, I’ve worked from
-                        small start-up companies, up to big companies along the way. Collaborated with amazing people to build
-                        digital products for both business and consumer use. I enjoy designing, and coding beautifully simple
-                        things, my unequivocal love for making things, my ball of fire ethic to create something to make the world a
-                        better place.
+                    Everything started with passion for technologies, curiosity about how things work as it is, 
+                    and desire to create things that make a difference. I started nearly 4 years ago in the Software 
+                    Development field, I’ve worked from small start-up companies, up to big companies along the way. 
+                    Collaborated with amazing people to build digital products for both business and consumer use. I 
+                    enjoy designing, and coding beautifully simple things, my unequivocal love for making things, my 
+                    ball of fire ethic to create something to make the world a better place.
                     </p>
                 </div>
             </section>
