@@ -159,12 +159,10 @@
 
     #projectReachSection {
         margin-bottom: -155px;
+        height: 280px;
         #container {
             flex-direction: column;
             margin: 0 1rem;
-            .column {
-                margin: 3rem 0;
-            }
         }
     }
 }
